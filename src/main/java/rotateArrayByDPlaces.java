@@ -1,14 +1,15 @@
 public class rotateArrayByDPlaces {
   public static void main(String[] args) {
     int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-    int byd = 17;
-    int n = arr.length;
-    int d = byd % n; // rotating with d==n gives same array back
+    int d = 17;
     rotateArrayByD(arr, d);
   }
 
   public static void rotateArrayByD(int[] arr, int d) {
+
     int n = arr.length;
+    d = d % n; // rotating with d==n gives same array back
+
     int[] temp = new int[n];
 
     // copying first rotated elements to temp
